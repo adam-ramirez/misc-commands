@@ -1,0 +1,12 @@
+##.gitconfig additions to make project setup and dismantling quicker
+    
+    #npmrs used to start up a project on stable, running npm install, gulp r and gulp serve
+    #npmrsl starts a project for local webservices
+    #nodeMaster, pulls the master branch and resets gulp and such
+    #buildstoreMaster pulls master for buildstore and com and start buildstore on master
+##
+
+    npmrs	=	"!npm install; gulp r; gulp s"
+    npmrsl	=	"!npm install; gulp r; gulp s --profile local"
+    nodeMaster 	=	"!git fetch; git rom; npm install; gulp r"
+    buildMaster = "!git fetch; sudo; git rom; cd coldfusion/com; git rom; cd ../..; vagrant reload --provision"
